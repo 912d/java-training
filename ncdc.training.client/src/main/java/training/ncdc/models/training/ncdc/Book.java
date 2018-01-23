@@ -15,11 +15,11 @@ public class Book {
 
 	@NotNull
     @Size(min=2, max=30)
-	@Pattern(regexp="A\\w* A\\w*")
+	@Pattern(regexp="A\\w* A\\w*", message="Firstname and lastname must start with capital letter A")
     private String author;
 	
 	@NotNull
-    @Size(min=13, max=13)
+    @Size(min=13, max=13, message="ISBN must contain 13 digits")
     private String isbn;
     
     public Book() {}
