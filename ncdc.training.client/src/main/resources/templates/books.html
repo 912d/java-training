@@ -4,25 +4,33 @@
     <title>Books list</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
-    <link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link href="webjars/bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
 </head>
 <body>
-	<h1>Book list</h1>
-	<a href="/ncdc.training.client-0.0.1/add">Add new</a>
-    <div th:if="${isEmpty} == true">
-    	<p th:text="'There is no books'" />
-    </div>
-      <table>
-      <tr>
-        <th>TITLE</th>
-        <th>AUTHOR</th>
-        <th>ISBN</th>
-      </tr>
-      <tr th:each="book : ${books}">
-        <td th:text="${book.title}"></td>
-        <td th:text="${book.author}"></td>
-        <td th:text="${book.isbn}"></td>
-      </tr>
-    </table>
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="webjars/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col">
+				<h1>Book list</h1>
+				<a href="/ncdc.training.client-0.0.1/add">Add new</a>
+			    <div th:if="${isEmpty} == true">
+			    	<p th:text="'There is no books'" />
+			    </div>
+			      <table>
+			      <tr>
+			        <th>TITLE</th>
+			        <th>AUTHOR</th>
+			        <th>ISBN</th>
+			      </tr>
+			      <tr th:each="book : ${books}">
+			        <td th:text="${book.title}"></td>
+			        <td th:text="${book.author}"></td>
+			        <td th:text="${book.isbn}"></td>
+			      </tr>
+			    </table>
+	    	</div>
+	    </div>
+	</div>
 </body>
 </html>
