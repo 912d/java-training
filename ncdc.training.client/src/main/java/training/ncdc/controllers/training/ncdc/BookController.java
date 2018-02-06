@@ -48,6 +48,6 @@ public class BookController {
         }
     	bookService.add(book);
     	log.info("Redirecting to books");
-        return "redirect:/books/";
+        return "redirect:/books";
     }
 }
