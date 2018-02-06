@@ -11,7 +11,7 @@ import training.ncdc.Book;
 @Component
 public class BookService implements IBookService {
 
-	private static final String ADDRESS = "http://localhost:8090/api/";
+	private static final String ADDRESS = "http://localhost:8080/ncdc.training.server-0.0.1/api/";
 	private static final String ADD = ADDRESS + "add";
 	private static final String ALL = ADDRESS + "all";
 	private final RestTemplate restTemplate = new RestTemplate();

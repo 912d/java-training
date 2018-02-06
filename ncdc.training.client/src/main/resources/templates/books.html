@@ -4,10 +4,11 @@
     <title>Books list</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
 </head>
 <body>
 	<h1>Book list</h1>
-	<a href="/add">Add new</a>
+	<a href="/ncdc.training.client-0.0.1/add">Add new</a>
     <div th:if="${isEmpty} == true">
     	<p th:text="'There is no books'" />
     </div>
